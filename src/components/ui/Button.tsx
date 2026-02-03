@@ -12,22 +12,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <button
                 ref={ref}
                 className={cn(
-                    'inline-flex items-center justify-center font-medium transition-all duration-200',
+                    'inline-flex items-center justify-center font-semibold transition-all duration-300',
                     'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black',
                     'disabled:opacity-50 disabled:pointer-events-none',
+                    'shadow-lg hover:shadow-xl',
                     // Variants
                     variant === 'primary' &&
-                    'bg-white text-black hover:bg-zinc-200 focus:ring-white',
+                    'bg-white text-black hover:bg-zinc-100 focus:ring-white hover:scale-[1.02]',
                     variant === 'secondary' &&
-                    'bg-zinc-900 text-white border border-zinc-700 hover:bg-zinc-800 focus:ring-zinc-500',
+                    'glass-strong text-white hover:bg-zinc-800/80 focus:ring-zinc-500 hover:scale-[1.02]',
                     variant === 'ghost' &&
-                    'bg-transparent text-zinc-400 hover:text-white hover:bg-white/5',
+                    'bg-transparent text-zinc-400 hover:text-white hover:bg-white/5 shadow-none',
                     variant === 'outline' &&
-                    'bg-transparent text-white border border-zinc-600 hover:border-zinc-400 focus:ring-zinc-400',
+                    'glass text-white border-zinc-600 hover:border-zinc-400 focus:ring-zinc-400 hover:scale-[1.02]',
                     // Sizes
-                    size === 'sm' && 'px-3 py-1.5 text-sm rounded-lg',
-                    size === 'md' && 'px-5 py-2.5 text-sm rounded-xl',
-                    size === 'lg' && 'px-8 py-3 text-base rounded-2xl',
+                    size === 'sm' && 'px-4 py-2 text-sm rounded-xl',
+                    size === 'md' && 'px-6 py-3 text-sm rounded-2xl',
+                    size === 'lg' && 'px-8 py-4 text-base rounded-2xl',
                     className
                 )}
                 {...props}

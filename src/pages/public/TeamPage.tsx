@@ -114,37 +114,37 @@ export function TeamPage() {
                                 to={`/team/${member.slug}`}
                                 data-aos="fade-up"
                                 data-aos-delay={index * 50}
-                                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 transition-all duration-300"
+                                className="group relative overflow-hidden rounded-2xl glass-card hover:scale-[1.02] transition-all duration-500"
                             >
                                 {/* Photo */}
                                 <div className="aspect-square overflow-hidden">
                                     <img
                                         src={member.photo_url}
                                         alt={member.name}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     {/* Overlay on hover */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-500" />
                                 </div>
 
                                 {/* Info */}
                                 <div className="absolute inset-x-0 bottom-0 p-6">
-                                    <h3 className="text-xl font-semibold text-white group-hover:text-zinc-300 transition-colors">
+                                    <h3 className="text-2xl font-bold text-white group-hover:text-zinc-200 transition-colors mb-2">
                                         {member.name}
                                     </h3>
-                                    <p className="text-sm text-zinc-400 mb-3">{member.role}</p>
-                                    <p className="text-sm text-zinc-500 line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <p className="text-sm text-zinc-300 font-medium mb-4">{member.role}</p>
+                                    <p className="text-sm text-zinc-400 line-clamp-2 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
                                         {member.bio}
                                     </p>
 
                                     {/* Social Links */}
-                                    <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                                         <a
                                             href={member.linkedin_url}
                                             onClick={(e) => e.stopPropagation()}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+                                            className="p-2.5 rounded-xl glass-strong hover:bg-white/20 transition-all duration-300"
                                         >
                                             <Linkedin className="h-4 w-4 text-white" />
                                         </a>
@@ -153,14 +153,14 @@ export function TeamPage() {
                                             onClick={(e) => e.stopPropagation()}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+                                            className="p-2.5 rounded-xl glass-strong hover:bg-white/20 transition-all duration-300"
                                         >
                                             <Github className="h-4 w-4 text-white" />
                                         </a>
                                         <a
                                             href={`mailto:${member.email}`}
                                             onClick={(e) => e.stopPropagation()}
-                                            className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+                                            className="p-2.5 rounded-xl glass-strong hover:bg-white/20 transition-all duration-300"
                                         >
                                             <Mail className="h-4 w-4 text-white" />
                                         </a>

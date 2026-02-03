@@ -33,9 +33,9 @@ export function Navbar() {
         <header className="fixed top-4 left-0 right-0 z-50 px-4">
             <nav
                 className={cn(
-                    'mx-auto max-w-4xl rounded-full px-6 py-3 transition-all duration-300',
-                    'glass',
-                    isScrolled && 'shadow-lg shadow-black/20'
+                    'mx-auto max-w-4xl rounded-full px-6 py-3.5 transition-all duration-300',
+                    'glass-strong',
+                    isScrolled && 'shadow-2xl shadow-black/40'
                 )}
             >
                 <div className="flex items-center justify-between">
