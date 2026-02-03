@@ -60,10 +60,12 @@ export function HomePage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700 mb-8"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-strong mb-8 shadow-lg"
                     >
-                        <span className="text-zinc-400">🔬</span>
-                        <span className="text-sm text-zinc-300">Research & Innovation</span>
+                        <span className="text-yellow-400 text-lg">⭐</span>
+                        <span className="text-sm font-medium text-white tracking-wide uppercase">
+                            Award-Winning Research
+                        </span>
                     </motion.div>
 
                     {/* Main Heading */}
@@ -115,23 +117,29 @@ export function HomePage() {
             {/* Categories Section */}
             <section className="py-20 px-4">
                 <div className="max-w-6xl mx-auto">
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-8">
                         {/* VLSI Card */}
                         <Link
                             to="/portfolio?category=vlsi"
                             data-aos="fade-up"
-                            className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-900 to-zinc-950 p-8 border border-zinc-800 hover:border-zinc-600 transition-all duration-300"
+                            className="group relative overflow-hidden rounded-3xl glass-card p-10 hover:scale-[1.02] transition-all duration-500 hover-glow-blue"
                         >
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
-                            <Cpu className="h-12 w-12 text-blue-400 mb-6" />
-                            <h3 className="text-2xl font-bold text-white mb-3">VLSI Design</h3>
-                            <p className="text-zinc-400 mb-6">
-                                Advanced semiconductor design, ASIC development, and FPGA implementations
-                                for next-generation computing.
-                            </p>
-                            <span className="inline-flex items-center text-blue-400 group-hover:text-blue-300">
-                                Explore Projects <ChevronRight className="ml-1 h-4 w-4" />
-                            </span>
+                            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500" />
+                            <div className="relative z-10">
+                                <div className="inline-flex p-4 rounded-2xl bg-blue-500/10 border border-blue-500/20 mb-6 group-hover:bg-blue-500/20 transition-all duration-300">
+                                    <Cpu className="h-10 w-10 text-blue-400" />
+                                </div>
+                                <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-blue-100 transition-colors">
+                                    VLSI Design
+                                </h3>
+                                <p className="text-zinc-400 mb-8 leading-relaxed">
+                                    Advanced semiconductor design, ASIC development, and FPGA implementations
+                                    for next-generation computing.
+                                </p>
+                                <span className="inline-flex items-center text-blue-400 font-medium group-hover:text-blue-300 group-hover:gap-2 gap-1 transition-all">
+                                    Explore Projects <ChevronRight className="h-5 w-5" />
+                                </span>
+                            </div>
                         </Link>
 
                         {/* AI & Robotics Card */}
@@ -139,18 +147,24 @@ export function HomePage() {
                             to="/portfolio?category=ai-robotics"
                             data-aos="fade-up"
                             data-aos-delay="100"
-                            className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-zinc-900 to-zinc-950 p-8 border border-zinc-800 hover:border-zinc-600 transition-all duration-300"
+                            className="group relative overflow-hidden rounded-3xl glass-card p-10 hover:scale-[1.02] transition-all duration-500 hover-glow-purple"
                         >
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl" />
-                            <Bot className="h-12 w-12 text-purple-400 mb-6" />
-                            <h3 className="text-2xl font-bold text-white mb-3">AI & Robotics</h3>
-                            <p className="text-zinc-400 mb-6">
-                                Machine learning systems, autonomous robots, and intelligent automation
-                                for real-world applications.
-                            </p>
-                            <span className="inline-flex items-center text-purple-400 group-hover:text-purple-300">
-                                Explore Projects <ChevronRight className="ml-1 h-4 w-4" />
-                            </span>
+                            <div className="absolute top-0 right-0 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all duration-500" />
+                            <div className="relative z-10">
+                                <div className="inline-flex p-4 rounded-2xl bg-purple-500/10 border border-purple-500/20 mb-6 group-hover:bg-purple-500/20 transition-all duration-300">
+                                    <Bot className="h-10 w-10 text-purple-400" />
+                                </div>
+                                <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-purple-100 transition-colors">
+                                    AI & Robotics
+                                </h3>
+                                <p className="text-zinc-400 mb-8 leading-relaxed">
+                                    Machine learning systems, autonomous robots, and intelligent automation
+                                    for real-world applications.
+                                </p>
+                                <span className="inline-flex items-center text-purple-400 font-medium group-hover:text-purple-300 group-hover:gap-2 gap-1 transition-all">
+                                    Explore Projects <ChevronRight className="h-5 w-5" />
+                                </span>
+                            </div>
                         </Link>
                     </div>
                 </div>
@@ -182,23 +196,23 @@ export function HomePage() {
                                 to={`/portfolio/${project.slug}`}
                                 data-aos="fade-up"
                                 data-aos-delay={index * 100}
-                                className="group relative overflow-hidden rounded-2xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-600 transition-all duration-300"
+                                className="group relative overflow-hidden rounded-2xl glass-card hover:scale-[1.02] transition-all duration-500"
                             >
-                                <div className="aspect-video overflow-hidden">
+                                <div className="aspect-video overflow-hidden bg-zinc-900">
                                     <img
                                         src={project.thumbnail_url}
                                         alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                                     />
                                 </div>
-                                <div className="p-5">
-                                    <span className="inline-block px-2 py-1 text-xs font-medium uppercase tracking-wider text-zinc-400 bg-zinc-800/50 rounded mb-3">
+                                <div className="p-6">
+                                    <span className="inline-block px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-zinc-300 bg-zinc-800/70 rounded-full mb-4 backdrop-blur-sm">
                                         {project.category === 'vlsi' ? 'VLSI' : 'AI & Robotics'}
                                     </span>
-                                    <h3 className="text-lg font-semibold text-white group-hover:text-zinc-300 transition-colors">
+                                    <h3 className="text-xl font-bold text-white group-hover:text-zinc-200 transition-colors mb-2">
                                         {project.title}
                                     </h3>
-                                    <p className="mt-2 text-sm text-zinc-400 line-clamp-2">
+                                    <p className="mt-2 text-sm text-zinc-400 line-clamp-2 leading-relaxed">
                                         {project.description}
                                     </p>
                                 </div>
@@ -220,17 +234,32 @@ export function HomePage() {
             <section className="py-20 px-4">
                 <div className="max-w-6xl mx-auto">
                     <div
-                        className="grid grid-cols-2 md:grid-cols-4 gap-8 p-8 rounded-3xl bg-zinc-900/30 border border-zinc-800"
+                        className="relative overflow-hidden rounded-3xl glass-card p-12"
                         data-aos="fade-up"
                     >
-                        {stats.map((stat, index) => (
-                            <div key={index} className="text-center">
-                                <div className="text-3xl md:text-4xl font-bold text-white">
-                                    {stat.value}
-                                </div>
-                                <div className="mt-1 text-sm text-zinc-400">{stat.label}</div>
-                            </div>
-                        ))}
+                        {/* Decorative glow */}
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
+                        
+                        <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+                            {stats.map((stat, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="text-center"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-sm text-zinc-400 font-medium tracking-wide">
+                                        {stat.label}
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

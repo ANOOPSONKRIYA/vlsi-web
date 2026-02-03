@@ -11,10 +11,10 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
             <div
                 ref={ref}
                 className={cn(
-                    'rounded-2xl bg-zinc-900/50 backdrop-blur-sm',
-                    variant === 'default' && 'border border-zinc-800',
+                    'rounded-2xl glass-card',
+                    variant === 'default' && '',
                     variant === 'interactive' &&
-                    'border border-zinc-800 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-900/70 cursor-pointer',
+                    'transition-all duration-500 hover:scale-[1.02] cursor-pointer hover:shadow-2xl',
                     variant === 'bordered' && 'border-2 border-zinc-700',
                     className
                 )}
